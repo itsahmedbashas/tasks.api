@@ -10,6 +10,7 @@ namespace Tasks.API.Utils
     {
         public TaskMappingProfile()
         {
+            // source,destination
             CreateMap<UserModel, UserViewModel>()
             .ForMember(dest => dest.UName, opt => opt.MapFrom(sou => sou.UserName))
             .ForMember(dest => dest.UFullName, opt => opt.MapFrom(sou => sou.UserFullName))
